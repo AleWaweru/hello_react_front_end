@@ -14,7 +14,6 @@ export const fetchGreetingsThunk = createAsyncThunk(
   'greetings/fetchGreetings',
   async () => {
     const { data } = await http.get();
-    console.log(data);
     return data.content;
   },
 );
@@ -27,7 +26,6 @@ const greetingsSlice = createSlice({
     [fetchGreetingsThunk.fulfilled]: (state, action) => {
       state.isLoading = false;
       state.greetings = action.payload;
-      console.log(action.payload)
     },
     [fetchGreetingsThunk.pending]: (state) => { state.isLoading = true; },
     [fetchGreetingsThunk.rejected]: (state) => { state.isFaild = true; },

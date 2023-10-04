@@ -104,7 +104,7 @@ To run the project, execute the following command:
 ```
 
 ### Frontend link   
-- [🚀 backend](http://127.0.0.1:3000/)
+- [🚀 backend](https://github.com/AleWaweru/hello-rails-back-end)
 
 ### Run tests
 

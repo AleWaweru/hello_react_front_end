@@ -4,20 +4,12 @@ import { fetchGreetingsThunk } from '../redux/slices/greetingsSlice';
 
 const Greeting = () => {
   const greeting = useSelector((state) => state.greetings.greetings);
-  console.log(greeting);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchGreetingsThunk())
-      .then(() => {
-        console.log('Greeting fetched successfully');
-      })
-      .catch((error) => {
-        console.error('Error fetching greeting:', error);
-      });
-  }, [dispatch]);
-  
-
+    dispatch(fetchGreetingsThunk());
+  },
+  [dispatch]);
   return (
     <>
       <h1>I greet you</h1>
